@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-// import emailjs from 'emailjs/browser';
+import emailjs from '@emailjs/browser';
 import "./contact.css";
 
 const Contact = () => {
@@ -8,14 +8,13 @@ const Contact = () => {
   const sendEmail = (e) => {
     e.preventDefault();
 
-    // emailjs
-    //   .sendForm(
-    //     "service_x1hewh5",
-    //     "template_2ki8hlo",
-    //     form.current,
-    //     "vxDcl4UI2jbOQBn6f"
-    //   )
-    //   e.target.reset()
+    emailjs.sendForm('service_scgrh9j', 'template_udyn6nk', form.current, 'Kagbj35OliRFyBqAN')
+    .then((res) => {
+      console.log(res.text);
+    }, (error) => {
+      console.log(error.text);
+    });
+    e.target.reset();
   };
 
   return (
@@ -51,7 +50,7 @@ const Contact = () => {
             <div className="contact__form-div contact__form-area">
               <label className="contact__form-tag">Message</label>
               <textarea
-                name="project"
+                name="message"
                 cols="30"
                 rows="10"
                 className="contact__form-input"
@@ -59,7 +58,7 @@ const Contact = () => {
               ></textarea>
             </div>
 
-            <button className="button button--flex">
+            <button className="button button--flex" type='submit' value='Send'>
               Send Message
               <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
           viewBox="0 0 24 24" 

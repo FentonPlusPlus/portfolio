@@ -14,7 +14,7 @@ const Social = () => {
       </a>
       
       <a
-        href="https://github.com/"
+        href="https://github.com/FentonPlusPlus"
         className="home__social-icon"
         target="_blank"
       >
