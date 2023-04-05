@@ -9,7 +9,7 @@ const ScrollUp = () => {
     else scrollUp.classList.remove("show-scroll");
   });
   return (
-    <a href="home" className="scrollup">
+    <a href="#home" className="scrollup">
       <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
 width="50" height="50"
 viewBox="0 0 50 50">

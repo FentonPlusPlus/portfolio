@@ -82,3 +82,11 @@
     background-color: var(--profile-blue);
     color: white;
 }
+
+@media screen and (max-width: 768px) {
+    .work__container {
+        grid-template-columns: repeat(1, max-content);
+        gap: 3rem;
+        justify-content: center;
+    }
+  }
